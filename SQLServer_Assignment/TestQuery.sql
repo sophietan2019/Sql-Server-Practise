@@ -1,0 +1,23 @@
+--Test Created Database
+SELECT * FROM CUSTOMERT
+SELECT * FROM TECHNICIAN
+SELECT * FROM PARTST
+SELECT * FROM SERVICE_CALL
+SELECT * FROM SERVICE_PARTS_DETAIL
+
+--Test Created Function
+SELECT DBO.GetOnHandPartsValueByCallNum(10000)
+
+--Test Created Procedure
+EXEC CustomerServiceReport
+
+--Test Created Trigger
+
+SELECT * FROM PARTST;
+
+UPDATE DBO.PARTST
+SET PRICE=400
+WHERE PART_NUM='B0B-1D6'
+
+
+SELECT * FROM LogFile;
